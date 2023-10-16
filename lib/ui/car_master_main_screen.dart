@@ -103,6 +103,17 @@ class _CarMasterMainScreenState extends State<CarMasterMainScreen> {
                   : Container();
             },
           ),
+          Observer(
+            builder: (context) {
+              return _getAllDetailsStore.loading
+                  ? Container()
+                  : _getAllDetailsStore.Success
+                      ? _getAllDetailsStore.alldetailsResponse != null
+                          ? Container()
+                          : const Center(child: Text("No Data"))
+                      : const Center(child: Text("No Data"));
+            },
+          ),
         ],
       ),
     );
@@ -134,7 +145,8 @@ class _CarMasterMainScreenState extends State<CarMasterMainScreen> {
         itemBuilder: (context, index) {
           return CarDetailsCard(
             item: _getAllDetailsStore.alldetailsResponse!.data![index],
-            image:_getAllDetailsStore.alldetailsResponse!.data![index].attachments![0].attachmentUrl![0].url,
+            image: _getAllDetailsStore.alldetailsResponse!.data![index]
+                .attachments![0].attachmentUrl![0].url,
           );
         });
   }
