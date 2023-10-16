@@ -1,0 +1,9 @@
+{
+  "vitals_dashboard_ECG": "ECG",
+  "vitals_dashboard_bp": "BP",
+  "vitals_dashboard_SPO2": "SPO2",
+  "vitals_dashboard_bt": "BT",
+  "vitals_dashboard_bg": "BG",
+  "vitals_dashboard_device_info": "Device Information",
+  "login_end": "------------------------------------------------------------------------------------"
+}
